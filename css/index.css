@@ -1,0 +1,343 @@
+
+
+body{
+    background-color: #333;
+    margin:0;
+    background-image: url('../stice/a.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70vh;
+  }
+   
+  .container{
+    margin: auto;
+    position: absolute;
+    top: 20%; left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    width:248px;
+    
+  }
+   
+  .face{
+    width:70px;
+    height:30px;
+    position:absolute;
+    right:0;
+    top:30px;
+    border-top-right-radius:15px;
+  }
+   
+  #r-ball{
+    animation: kiss 4s ease infinite;
+    background-color:#FD4;
+  }
+   
+  @keyframes kiss{
+    40%{transform:translate(0px);}
+    50%{transform:translate(30px) rotate(20deg);}
+    60%{transform:translate(-33px);}
+    67%{transform:translate(-33px);}
+    77%{transform:translate(0px);}
+  }
+   
+  .kiss{
+    /* background-color:red; */
+    width:13px;
+    height:10px;
+    /* background-color:#FD4; */
+    border-radius:50%;
+    border-left:5px solid;
+  }
+   
+  .kiss-m{
+    position:absolute;
+    left:20px;
+    top:22px;
+    opacity:0;
+    animation:kiss-m 4s ease infinite;
+  }
+   
+  @keyframes kiss-m{
+    0%{opacity:0;}
+    55%{opacity:0;}
+    55.1%{opacity:1;}
+    66%{opacity:1;}
+    66.1%{opacity:0;}
+  }
+   
+  .mouth-r{
+    animation:mouth-m 4s ease infinite;
+  }
+   
+  @keyframes mouth-m{
+    0%{opacity:1;}
+    54.9%{opacity:1;}
+    55%{opacity:0;}
+    66%{opacity:0;}
+    66.1%{opacity:1;}
+  }
+   
+  .face:after{
+    position:absolute;
+    content:"";
+    width:18px;
+    height:8px;
+    background-color:#badc58;
+    left:-5px;
+    top:20px;
+    border-radius:50%;
+  }
+   
+  .face:before{
+    position:absolute;
+    content:"";
+    width:18px;
+    height:8px;
+    background-color:#badc58;
+    right:-8px;
+    top:20px;
+    border-radius:50%;
+    z-index:-1;
+  }
+   
+  .face-r{
+    left:0;
+    top:37px;
+  }
+   
+  .face-r:after{
+    width:10px;
+    height:10px;
+    left:5px;
+  }
+   
+  .face-r:before{
+    width:10px;
+    height:10px;
+    right:-4px;
+  }
+  .eye{
+    width:15px;
+    height:14px;
+    border-radius:50%;
+    border-bottom:5px solid;
+    position:absolute;
+  }
+   
+  .eye-r-p{
+    border-top:5px solid;
+    border-bottom:0px solid;
+  }
+   
+  .eye-l{
+    left:10px;
+  }
+   
+  .eye-r{
+    right:5px;
+  }
+   
+  .mouth{
+    width:30px;
+    height:14px;
+    border-radius:50%;
+    border-bottom:5px solid;
+    position:absolute;
+    bottom:-5px;
+    transform:translate(3px);
+    left:0;
+    right:0;
+    margin: auto;
+  }
+   
+  .ball{
+    border: 8px solid;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    display:inline-block;
+    vertical-align:top;
+    position:relative;
+  }
+   
+  #r-ball{
+    position:relative;
+    z-index:40;
+  }
+   
+   
+  #l-ball{
+    animation: close 4s ease infinite;
+    position:relative;
+    z-index:50;
+    background-color:#FD4;
+  }
+   
+  .face-l{
+    animation: face 4s ease infinite;
+  }
+   
+  @keyframes close{
+    0%{transform:translate(0)}
+    20%{transform:translate(20px)}
+    35%{transform:translate(20px)}
+    55%{transform:translate(0px)}
+    100%{transform:translate(0px)}
+  }
+   
+  @keyframes face{
+    0%{transform:translate(0) rotate(0);}
+    10%{transform:translate(0) rotate(0);}
+    20%{transform:translate(5px) rotate(-2deg);}
+    28%{transform:translate(0) rotate(0);}
+    35%{transform:translate(5px) rotate(-2deg);}
+    50%{transform:translate(0) rotate(0);}
+    100%{transform:translate(0) rotate(0);}
+  }
+  @keyframes siz {
+              from{transform: translateY(-190%);}
+              to{transform: translateY(100);}
+          }
+   
+          .text{
+              overflow: hidden;
+              white-space: pre-wrap;
+              animation: siz 2s ease-in-out forwards;
+              color: #FD4;
+              text-align: center;
+          } 
+   
+
+.play-button {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    animation: rotate 2s linear infinite;
+  }
+   
+  .play-button::before,
+  .play-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+   
+  .play-button::before {
+    width: 50%;
+    height: 10%;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+   
+  .play-button::after {
+    width: 20%;
+    height: 20%;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+   
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.kiss2{
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+  .kiss{
+    width: 100%;
+    position: absolute;
+    top: 64%;
+    left: 0;
+    right: 0;
+  }
+  .kiss1{
+    display: block;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+  }
+  /* 预览图片 */
+
+  .small {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.big {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.big_img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+@keyframes scaleDraw {
+
+    /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0% {
+        transform: scale(1);/*开始为原始大小*/
+    }
+
+    25% {
+        transform: scale(1.5);/*放大1.1倍*/
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.5);
+    }
+}
+
+.ballon {
+    position: absolute;
+    top: 90%;
+     
+    /* height: 200px; */
+    margin: 0 auto;
+    color: #fff;
+    padding-left: 20%;
+    -webkit-animation-name: scaleDraw;/*关键帧名称*/
+    -webkit-animation-timing-function: ease-in-out;/*动画的速度曲线*/
+    -webkit-animation-iteration-count: infinite;/*动画播放的次数*/
+    -webkit-animation-duration: 5s;/*动画所花费的时间*/
+     font-size: 16px;
+    /*可以简写为*/
+    /* animation: scaleDraw 5s ease-in-out infinite; */
+    /* -webkit-animation: scaleDraw 5s ease-in-out infinite; */
+}

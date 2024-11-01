@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>jxj</title>
+ <link rel="stylesheet" href="./css/index.css">
+ <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+ 
+<div class='container'>
+  <div id='l-ball' class='ball'>
+    <div class='face face-l'>
+      <div class='eye eye-l'></div>
+      <div class='eye eye-r'></div>
+      <div class='mouth'></div>
+    </div>
+  </div>
+  <div id='r-ball' class='ball'>
+    <div class='face face-r'>
+      <div class='eye eye-l eye-r-p'></div>
+      <div class='eye eye-r eye-r-p'></div>
+      <div class='mouth mouth-r'></div>
+      <div class='kiss-m'>
+        <div class='kiss'></div>
+        <div class='kiss'></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h1 class="text">L O V E  Y</h1>
+<div class="kiss">
+  <audio controls autoplay class="kiss1">
+    <source src="./stice/yng.mp3" type="audio/mpeg"> 
+     姬晓靖专属
+    </audio>
+</div>
+ <!-- 小图 -->
+  <div  class="kiss2">
+    <img class="small" src="./stice/1.jpg">
+    <img class="small" src="./stice/2.jpg">
+    <img class="small" src="./stice/3.jpg">
+    <img class="small" src="./stice/4.jpg">
+    <img class="small" src="./stice/5.jpg">
+    <img class="small" src="./stice/6.jpg">
+    
+  </div>
+ 
+<!-- 大图div -->
+<div class="big">
+  <img class="big_img" src="">
+</div>
+<div class="ballon">Thank you for your appearance, it makes us even luckier</div>
+<script>
+  // 小图点击放大
+  $("img").click(function() {
+      // 获取当前点击小图的src
+      let imgSrc = $(this).attr("src");
+      // 将获取到的src赋值到大图显示区域img的src里
+      $(".big_img").attr("src", imgSrc);
+      // 显示大图区域
+      $(".big").show();
+  })
+  
+  // 隐藏大图显示区域
+  $(".big").click(function() {
+      $(this).hide();
+  })
+  </script>
+</body>
+</html>
